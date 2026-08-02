@@ -82,7 +82,7 @@ erDiagram
 - **Dim_Professor** — chave natural `id_professor`; `indicador_coordenador` derivado do relacionamento `idProfessor_coordenador` em Departamento (S/N) 
 - **Dim_Departamento** — Nome e Campus vindos diretamente do relacional
 - **Dim_Curso** — desnormaliza `id_departamento` para permitir drill-down direto sem passar por outra dimensão
-- **Dim_Disciplina** — carga horária incluída como sugestão de atributo analítico — **[CONFIRMAR SE EXISTE NA ORIGEM]**
+- **Dim_Disciplina** — carga horária incluída como sugestão de atributo analítico.
 - **Dim_Data** — granularidade diária sugerida (o desafio deixa a granularidade em aberto); pode ser trocada para mês/semestre conforme a necessidade de análise 
 
 ### Fato
