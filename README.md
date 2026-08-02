@@ -15,7 +15,7 @@ Entidades identificadas (extraídas via OCR da imagem — campos marcados como i
 |---|---|
 | Departamento | idDepartamento (PK), Nome, Campus, idProfessor_coordenador (FK → Professor) |
 | Professor | idProfessor (PK), Departamento_idDepartamento (FK) |
-| Curso | idCurso (PK), Departamento_idDepartamento (FK) [nome do curso: **CONFIRMAR NO DIAGRAMA**] |
+| Curso | idCurso (PK), Departamento_idDepartamento (FK)  |
 | Disciplina | idDisciplina (PK), Professor_idProfessor (FK), Curso_idCurso (FK) [nome/carga horária: ] |
 | Aluno | idAluno (PK) — fora do escopo deste desafio |
 | Matriculado | Aluno_idAluno (FK), Disciplina_idDisciplina (FK) — fora do escopo |
