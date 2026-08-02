@@ -1,0 +1,49 @@
+erDiagram
+    FATO_PROFESSOR }o--|| DIM_PROFESSOR : referencia
+    FATO_PROFESSOR }o--|| DIM_DEPARTAMENTO : referencia
+    FATO_PROFESSOR }o--|| DIM_CURSO : referencia
+    FATO_PROFESSOR }o--|| DIM_DISCIPLINA : referencia
+    FATO_PROFESSOR }o--|| DIM_DATA : referencia
+
+    DIM_PROFESSOR {
+        int sk_professor PK
+        int id_professor
+        varchar nome
+        char indicador_coordenador
+    }
+    DIM_DEPARTAMENTO {
+        int sk_departamento PK
+        int id_departamento
+        varchar nome
+        varchar campus
+    }
+    DIM_CURSO {
+        int sk_curso PK
+        int id_curso
+        varchar nome
+        int id_departamento
+    }
+    DIM_DISCIPLINA {
+        int sk_disciplina PK
+        int id_disciplina
+        varchar nome
+        int carga_horaria
+    }
+    DIM_DATA {
+        int sk_data PK
+        date data_completa
+        int ano
+        int semestre
+        int mes
+        varchar nome_mes
+        int dia
+        varchar dia_semana
+    }
+    FATO_PROFESSOR {
+        int sk_professor FK
+        int sk_departamento FK
+        int sk_curso FK
+        int sk_disciplina FK
+        int sk_data FK
+        int quantidade_ocorrencias
+    }
